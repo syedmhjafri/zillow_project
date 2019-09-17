@@ -14,7 +14,7 @@
                   </h1>
                   <p class="lead"> The easiest way to sell or buy properties online. Gauranteed!</p>
                   <div class="search">
-                      <form action="search.html">
+                      <form action="{% url 'search' %}">
                           <!-- Form Row 1 -->
                           <div class="form-row">
                               <div class="col-md-4 mb-3">
@@ -47,9 +47,9 @@
                                   <label class="sr-only">Bedrooms</label>
                                   <select name="bedrooms" class="form-control">
                                       <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                                      {% for key,value in bedroom_choices.items %}
-                                            <option value="{{ key }}">{{ value }}</option>
-                                      {% endfor %}
+                                    {% for key,value in bedroom_choices.items %}
+                                        <option value="{{ key }}">{{ value }}</option>
+                                    {% endfor %}
                                   </select>
                               </div>
                               <div class="col-md-6 mb-3">
